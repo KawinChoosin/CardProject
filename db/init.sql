@@ -1,0 +1,1 @@
+CREATE DATABASE IF NOT EXISTS card_todo_db;
