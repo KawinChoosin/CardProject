@@ -14,6 +14,11 @@ services:
     volumes:
       - db_data:/var/lib/mysql
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+<<<<<<< HEAD
+=======
+    networks:
+      - g11_card_todo_net 
+>>>>>>> 96fe2a3 (Initial commit)
 
   backend:
     build: ./backend
@@ -27,6 +32,11 @@ services:
       DB_NAME: card_todo_db
     depends_on:
       - db
+<<<<<<< HEAD
+=======
+    networks:
+      - g11_card_todo_net
+>>>>>>> 96fe2a3 (Initial commit)
 
   frontend:
     build: ./frontend
@@ -35,6 +45,16 @@ services:
       - '3333:3333'
     depends_on:
       - backend
+<<<<<<< HEAD
 
 volumes:
   db_data:
+=======
+    networks:
+      - g11_card_todo_net
+
+volumes:
+  db_data:
+networks:
+  g11_card_todo_net:
+>>>>>>> 96fe2a3 (Initial commit)
