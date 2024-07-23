@@ -9,6 +9,10 @@ const port = 2222;
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use((req, res, next) => {
+  res.header("access-control-allow-origin", ""); // หรือไม่ตั้งค่าเลย
+  next();
+});
 
 // Sync database
 sequelize.sync();
